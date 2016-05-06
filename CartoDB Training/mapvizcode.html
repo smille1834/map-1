@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FY16 DCS Map | American Red Cross  </title>
+
+
+    
+    <style>
+      html, body, #map {
+        height: 95%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  </head>
+  
+  
+  
+  <body>
+	<div class="header">
+	<img src="http://www.praywalker.com/artcommunity/Logo-Button-Horizontal-Stacked-%202%20cllor.png" align="right" width="262" height'"108"/>
+  	<h1 style="color:dimgrey;font-family:helvetica;margin-left: 20px;">  American Red Cross of Chicago & Northern IL</h1>
+	<h4 style="color:dimgrey;font-family:helvetica;margin-left: 20px;">  This map displays an overlay of fire responses with smoke detector installs throughout the Chicago & Northern IL Region for FY16</h4>
+	</div>
+	
+    <div id="map"></div>
+
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+    <script>
+	window.onload = function() {
+	var options = {
+	center: [41.83068856472101, -87.36190795898436],
+	zoom: 9,
+	scrollwheel: true,
+	layer_selector: true,
+	legends: true,
+	title: false,
+	description: false,
+	search: false,
+	fullscreen: true,
+	cartodb_logo: false
+};
+	
+  var vizjson = 'https://americanredcross.cartodb.com/u/smille1834/api/v2/viz/422d76bc-fffd-11e5-90eb-0e8c56e2ffdb/viz.json';
+  cartodb.createVis('map', vizjson, options);
+}
+
+
+    </script>
+
+  </body>
+</html>

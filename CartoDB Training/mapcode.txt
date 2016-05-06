@@ -1,0 +1,233 @@
+{
+id: "422d76bc-fffd-11e5-90eb-0e8c56e2ffdb",
+version: "0.1.0",
+title: "FY16 HFPC Story",
+likes: 0,
+description: "<p>Visual of where smoke detectors have been installed overlayed on a heat map of incident responses for FY16. </p> ",
+scrollwheel: false,
+legends: true,
+url: null,
+map_provider: "leaflet",
+bounds: [
+[
+41.52297326747377,
+-88.39599609375
+],
+[
+42.13693172716149,
+-86.32781982421875
+]
+],
+center: "[41.83068856472101, -87.36190795898436]",
+zoom: 10,
+updated_at: "2016-04-11T20:31:12+00:00",
+layers: [
+{
+options: {
+visible: true,
+type: "Tiled",
+name: "Nokia Reduced Day",
+className: "httpssmapsnlpnokiacommaptile21maptilenewestreduceddayzxy256png8lgengtokena7tbpacepg9mj_zghvkt9qapp_idkuyppsdxzznpffjskt24",
+base_type: "default",
+urlTemplate: "https://{s}.maps.nlp.nokia.com/maptile/2.1/maptile/newest/reduced.day/{z}/{x}/{y}/256/png8?lg=eng&token=A7tBPacePg9Mj_zghvKt9Q&app_id=KuYppsdXZznpffJsKT24",
+minZoom: "0",
+maxZoom: "20",
+attribution: "&copy;2016 HERE <a href="http://here.net/services/terms" target="_blank">Terms of use</a>",
+subdomains: "1234",
+style: null,
+read_only: true,
+layer_selector: true,
+legends: true,
+category: "Here",
+order: 0,
+id: "fa59d8ae-9363-408f-bac6-359370eb06e7"
+},
+infowindow: null,
+tooltip: null,
+id: "fa59d8ae-9363-408f-bac6-359370eb06e7",
+order: 0,
+type: "tiled"
+},
+{
+type: "namedmap",
+order: 1,
+options: {
+type: "namedmap",
+user_name: "smille1834",
+maps_api_template: "https://{user}.cartodb.com:443",
+sql_api_template: "https://{user}.cartodb.com:443",
+tiler_protocol: "http",
+tiler_domain: "cartodb.com",
+tiler_port: "80",
+filter: "mapnik",
+named_map: {
+name: "tpl_422d76bc_fffd_11e5_90eb_0e8c56e2ffdb",
+stat_tag: "422d76bc-fffd-11e5-90eb-0e8c56e2ffdb",
+params: {
+layer0: 1,
+layer1: 1,
+layer2: 1
+},
+layers: [
+{
+id: "4bcb9fb5-8a52-4c05-80da-28c90419e122",
+layer_name: "Chicago Neighborhoods",
+interactivity: "cartodb_id",
+visible: true
+},
+{
+id: "ca4650dc-afe2-4291-90c8-5156da2daa2e",
+layer_name: "FY16 DCSOps Responses",
+interactivity: "cartodb_id",
+visible: true,
+infowindow: {
+fields: [
+{
+name: "address",
+title: true,
+position: 1
+},
+{
+name: "county",
+title: true,
+position: 3
+},
+{
+name: "date",
+title: true,
+position: 4
+},
+{
+name: "incident_type",
+title: true,
+position: 9
+},
+{
+name: "num_people",
+title: true,
+position: 14
+}
+],
+template_name: "table/views/infowindow_light",
+template: "<div class="cartodb-popup v2"> <a href="#close" class="cartodb-popup-close-button close">x</a> <div class="cartodb-popup-content-wrapper"> <div class="cartodb-popup-content"> {{#content.fields}} {{#title}}<h4>{{title}}</h4>{{/title}} {{#value}} <p {{#type}}class="{{ type }}"{{/type}}>{{{ value }}}</p> {{/value}} {{^value}} <p class="empty">null</p> {{/value}} {{/content.fields}} </div> </div> <div class="cartodb-popup-tip-container"></div> </div> ",
+alternative_names: { },
+width: 226,
+maxHeight: 180
+},
+legend: {
+type: "intensity",
+show_title: true,
+title: "Fire Responses in FY16",
+template: "",
+visible: true,
+items: [
+{
+name: "Left label",
+visible: true,
+value: "Less",
+legend_type: "intensity",
+type: "text",
+sync: true
+},
+{
+name: "Right label",
+visible: true,
+value: "More",
+legend_type: "intensity",
+type: "text",
+sync: true
+},
+{
+name: "Color",
+visible: true,
+value: "#FFCC00",
+type: "color"
+}
+]
+}
+},
+{
+id: "d9cd4757-b556-45d7-ad9f-48cc2e202765",
+layer_name: "hfpc_for_fusion",
+interactivity: "cartodb_id",
+visible: true,
+legend: {
+type: "custom",
+show_title: true,
+title: "Home Fire Preparedness ",
+template: "",
+visible: true,
+items: [
+{
+name: "Smoke Alarms Installed in FY16",
+visible: true,
+value: "#000000",
+sync: true
+}
+]
+}
+}
+]
+},
+attribution: ""
+}
+}
+],
+overlays: [
+{
+type: "logo",
+order: 9,
+options: {
+display: true,
+x: 10,
+y: 40
+},
+template: ""
+},
+{
+type: "loader",
+order: 8,
+options: {
+display: true,
+x: 20,
+y: 150
+},
+template: "<div class="loader" original-title=""></div>"
+},
+{
+type: "zoom",
+order: 6,
+options: {
+display: true,
+x: 20,
+y: 20
+},
+template: "<a href="#zoom_in" class="zoom_in">+</a> <a href="#zoom_out" class="zoom_out">-</a>"
+},
+{
+type: "search",
+order: 3,
+options: {
+display: true,
+x: 60,
+y: 20
+},
+template: ""
+},
+{
+type: "share",
+order: 2,
+options: {
+display: true,
+x: 20,
+y: 20
+},
+template: ""
+}
+],
+prev: null,
+next: null,
+transition_options: {
+time: 0
+}
+}
